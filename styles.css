@@ -1,0 +1,5 @@
+:root { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+body { margin: 0; padding: 1rem; line-height:1.5; }
+header, main, footer { max-width: 900px; margin: 0 auto; }
+.project-list { list-style: none; padding:0; display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:1rem;}
+.project-list li { border-radius:8px; padding:1rem; box-shadow:0 4px 10px rgba(0,0,0,.06); background: white; }
