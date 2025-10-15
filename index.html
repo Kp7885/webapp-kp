@@ -1,36 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Project Showcase</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Web App</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <h1>My Web App</h1>
-    <p>Semantic HTML + CSS + JS filter demo</p>
+    <p>Semantic HTML + CSS + JS Filter Demo</p>
   </header>
 
-  <main>
-    <section aria-labelledby="filters">
-      <h2 id="filters">Filter Projects</h2>
-      <form id="filterForm">
-        <label><input type="checkbox" name="category" value="web"> Web</label>
-        <label><input type="checkbox" name="category" value="data"> Data</label>
-        <label><input type="checkbox" name="category" value="mobile"> Mobile</label>
-      </form>
-    </section>
+  <section class="filter">
+    <h2>Filter Projects</h2>
+    <div class="filters">
+      <label><input type="checkbox" value="web"> Web</label>
+      <label><input type="checkbox" value="data"> Data</label>
+      <label><input type="checkbox" value="mobile"> Mobile</label>
+    </div>
+  </section>
 
-    <section aria-labelledby="results">
-      <h2 id="results">Projects</h2>
-      <ul id="items" class="project-list">
-        <li data-category="web"><article><h3>Website A</h3><p>HTML/CSS project</p></article></li>
-        <li data-category="data"><article><h3>Data Dash</h3><p>Power BI / Python</p></article></li>
-        <li data-category="mobile"><article><h3>Mobile App</h3><p>Prototype</p></article></li>
-        <li data-category="web"><article><h3>Landing X</h3><p>Semantic markup</p></article></li>
-      </ul>
-    </section>
+  <main>
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card web">
+        <h3>Website A</h3>
+        <p>HTML/CSS project</p>
+      </div>
+      <div class="project-card data">
+        <h3>Data Dash</h3>
+        <p>Power BI / Python</p>
+      </div>
+      <div class="project-card mobile">
+        <h3>Mobile App</h3>
+        <p>Prototype</p>
+      </div>
+      <div class="project-card web">
+        <h3>Landing X</h3>
+        <p>Semantic markup</p>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -40,5 +50,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-
-
