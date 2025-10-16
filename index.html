@@ -1,50 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Web App</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Web App | Project Filter</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>My Web App</h1>
-    <p>Semantic HTML + CSS + JS Filter Demo</p>
+    <nav>
+      <h1>My Web App</h1>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <p class="subtitle">Semantic HTML + CSS + JavaScript Filter Demo</p>
   </header>
 
-  <section class="filter">
-    <h2>Filter Projects</h2>
-    <div class="filters">
-      <label><input type="checkbox" value="web"> Web</label>
-      <label><input type="checkbox" value="data"> Data</label>
-      <label><input type="checkbox" value="mobile"> Mobile</label>
+  <section class="controls">
+    <h2>Filter & Search Projects</h2>
+    <div class="filter-bar">
+      <div class="filters">
+        <label><input type="checkbox" value="web"> Web</label>
+        <label><input type="checkbox" value="data"> Data</label>
+        <label><input type="checkbox" value="mobile"> Mobile</label>
+      </div>
+      <input type="text" id="search" placeholder="Search projects...">
     </div>
   </section>
 
-  <main>
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card web">
+  <main id="projects">
+    <h2>Projects (<span id="count">4</span>)</h2>
+    <section class="project-grid">
+      <article class="project-card web" data-title="Website A">
         <h3>Website A</h3>
         <p>HTML/CSS project</p>
-      </div>
-      <div class="project-card data">
+      </article>
+      <article class="project-card data" data-title="Data Dash">
         <h3>Data Dash</h3>
         <p>Power BI / Python</p>
-      </div>
-      <div class="project-card mobile">
+      </article>
+      <article class="project-card mobile" data-title="Mobile App">
         <h3>Mobile App</h3>
         <p>Prototype</p>
-      </div>
-      <div class="project-card web">
+      </article>
+      <article class="project-card web" data-title="Landing X">
         <h3>Landing X</h3>
         <p>Semantic markup</p>
-      </div>
-    </div>
+      </article>
+    </section>
   </main>
 
+  <aside id="about">
+    <h2>About This App</h2>
+    <p>This web app demonstrates semantic structure, dynamic CSS styling, and JavaScript-based filtering to create an interactive user experience.</p>
+  </aside>
+
   <footer>
-    <p>© Khushi Patel</p>
+    <p>© <span id="year"></span> Khushi Patel | Built using HTML, CSS, JS</p>
   </footer>
 
   <script src="app.js"></script>
