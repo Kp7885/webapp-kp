@@ -6,11 +6,10 @@ const searchInput = document.getElementById('search');
 const projects = document.querySelectorAll('.project-card');
 const countDisplay = document.getElementById('count');
 
-// Filter + Search Logic
+// Filter + Search Functionality
 function filterProjects() {
   const checked = [...checkboxes].filter(cb => cb.checked).map(cb => cb.value);
   const searchText = searchInput.value.toLowerCase();
-
   let visibleCount = 0;
 
   projects.forEach(project => {
